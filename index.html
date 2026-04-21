@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shriyaaverse</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Raleway:wght@200;300;400&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+<!-- ████████████████████  PAGE 1 — LANDING  ████████████████████ -->
+<section id="landing">
+
+  <canvas id="starfield"></canvas>
+  <div class="nebula n1"></div>
+  <div class="nebula n2"></div>
+  <div class="nebula n3"></div>
+  <div id="meteors"></div>
+
+  <!-- floating constellation dots -->
+  <svg class="constellation" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice">
+    <g opacity="0.18" stroke="#e8c97a" stroke-width="0.6" fill="none">
+      <line x1="120" y1="200" x2="280" y2="310"/><line x1="280" y1="310" x2="400" y2="220"/>
+      <line x1="400" y1="220" x2="500" y2="350"/><line x1="1100" y1="150" x2="1250" y2="280"/>
+      <line x1="1250" y1="280" x2="1350" y2="200"/><line x1="200" y1="650" x2="350" y2="720"/>
+      <line x1="350" y1="720" x2="500" y2="660"/><line x1="950" y1="700" x2="1100" y2="760"/>
+      <line x1="1100" y1="760" x2="1200" y2="680"/>
+    </g>
+    <g fill="#e8c97a">
+      <circle cx="120" cy="200" r="2.5" opacity="0.5"/><circle cx="280" cy="310" r="2" opacity="0.4"/>
+      <circle cx="400" cy="220" r="3" opacity="0.6"/><circle cx="500" cy="350" r="1.8" opacity="0.35"/>
+      <circle cx="1100" cy="150" r="2.5" opacity="0.5"/><circle cx="1250" cy="280" r="2" opacity="0.4"/>
+      <circle cx="1350" cy="200" r="3" opacity="0.55"/><circle cx="200" cy="650" r="2" opacity="0.4"/>
+      <circle cx="350" cy="720" r="2.5" opacity="0.45"/><circle cx="500" cy="660" r="1.8" opacity="0.35"/>
+      <circle cx="950" cy="700" r="2.2" opacity="0.4"/><circle cx="1100" cy="760" r="2.8" opacity="0.5"/>
+      <circle cx="1200" cy="680" r="2" opacity="0.4"/>
+    </g>
+  </svg>
+
+  <div class="landing-center">
+    <div class="orbit-system">
+      <div class="orbit o1"><span class="orb orb-gold"></span></div>
+      <div class="orbit o2"><span class="orb orb-rose"></span></div>
+      <div class="orbit o3"><span class="orb orb-violet"></span></div>
+    </div>
+
+    <div class="title-block">
+      <div class="pre-title">✦ a universe of her own ✦</div>
+
+      <!-- 3D extruded title -->
+      <div class="title-3d-wrap">
+        <h1 class="title-3d" data-text="Shriyaaverse">Shriyaaverse</h1>
+      </div>
+
+      <div class="galaxy-icon">🌌</div>
+
+      <div class="launch-date">
+        <span class="date-line"></span>
+        <span class="date-text">The Universe Begins · 22nd April</span>
+        <span class="date-line"></span>
+      </div>
+
+      <p class="subtitle">born to orbit differently · made to be remembered</p>
+    </div>
+
+    <button id="enter-btn">
+      <span class="btn-ring"></span>
+      <span class="btn-ring btn-ring2"></span>
+      <span class="btn-label">Enter the Universe</span>
+    </button>
+
+    <div class="scroll-pulse">↓ scroll to explore ↓</div>
+  </div>
+
+  <div id="landing-particles"></div>
+</section>
+
+<!-- ████████████████████  PAGE 2 — EXPERIENCE (scrollable)  ████████████████████ -->
+<section id="experience" class="hidden">
+
+  <!-- Full-screen background IMAGE (replaces video) -->
+  <div class="exp-bg" id="exp-bg" style="background-image:url('assets/bg-image.jpg')"></div>
+  <div class="exp-bg-overlay"></div>
+
+  <!-- Scanlines + vignette -->
+  <div class="scanlines"></div>
+  <div class="vignette"></div>
+
+  <!-- Audio -->
+  <audio id="main-audio" src="assets/audio.mp3" preload="auto"></audio>
+
+  <!-- ── HERO (viewport 1) ── -->
+  <div class="exp-hero">
+    <div class="exp-hero-text">
+      <div class="exp-pre">welcome to</div>
+      <div class="exp-title-3d-wrap">
+        <div class="exp-title-3d" data-text="Shriyaaverse">Shriyaaverse</div>
+      </div>
+      <div class="exp-tagline">A Maharashtrian Baddie's Universe</div>
+      <div class="exp-date-badge">22nd April · The Beginning</div>
+    </div>
+
+    <!-- Ambient floating orbs on experience page -->
+    <div class="exp-orb eo1"></div>
+    <div class="exp-orb eo2"></div>
+    <div class="exp-orb eo3"></div>
+
+    <div class="scroll-down-hint">
+      <span>scroll down</span>
+      <div class="scroll-arrow"></div>
+    </div>
+  </div>
+
+  <!-- ── MOMENTS SECTION (clips appear at corners as you scroll) ── -->
+  <div class="moments-section" id="moments-section">
+
+    <!-- Moment 1 -->
+    <div class="moment" data-corner="top-left" data-index="0">
+      <div class="moment-clip-wrap corner-top-left">
+        <video src="assets/clip1.mp4" muted playsinline loop preload="auto" class="moment-clip"></video>
+        <div class="clip-frame"></div>
+      </div>
+      <div class="moment-text-wrap corner-top-left-text">
+        <div class="moment-number">01</div>
+        <div class="moment-label">A Maharashtrian Baddie ✨</div>
+      </div>
+    </div>
+
+    <!-- Moment 2 -->
+    <div class="moment" data-corner="top-right" data-index="1">
+      <div class="moment-clip-wrap corner-top-right">
+        <video src="assets/clip2.mp4" muted playsinline loop preload="auto" class="moment-clip"></video>
+        <div class="clip-frame"></div>
+      </div>
+      <div class="moment-text-wrap corner-top-right-text">
+        <div class="moment-number">02</div>
+        <div class="moment-label">Future Netaji👑</div>
+      </div>
+    </div>
+
+    <!-- Moment 3 -->
+    <div class="moment" data-corner="bottom-left" data-index="2">
+      <div class="moment-clip-wrap corner-bottom-left">
+        <video src="assets/clip3.mp4" muted playsinline loop preload="auto" class="moment-clip"></video>
+        <div class="clip-frame"></div>
+      </div>
+      <div class="moment-text-wrap corner-bottom-left-text">
+        <div class="moment-number">03</div>
+        <div class="moment-label">Sporty 🎾</div>
+      </div>
+    </div>
+
+    <!-- Moment 4 -->
+    <div class="moment" data-corner="top-left" data-index="3">
+      <div class="moment-clip-wrap corner-top-left">
+        <video src="assets/clip4.mp4" muted playsinline loop preload="auto" class="moment-clip"></video>
+        <div class="clip-frame"></div>
+      </div>
+      <div class="moment-text-wrap corner-top-left-text">
+        <div class="moment-number">04</div>
+        <div class="moment-label">Dancefloor Slayer 🔥</div>
+      </div>
+    </div>
+
+    <!-- Moment 5 -->
+    <div class="moment" data-corner="top-right" data-index="4">
+      <div class="moment-clip-wrap corner-top-right">
+        <video src="assets/clip5.mp4" muted playsinline loop preload="auto" class="moment-clip"></video>
+        <div class="clip-frame"></div>
+      </div>
+      <div class="moment-text-wrap corner-top-right-text">
+        <div class="moment-number">05</div>
+        <div class="moment-label">Nakhreni cutie 💃</div>
+      </div>
+    </div>
+
+    <!-- Moment 6 -->
+    <div class="moment" data-corner="bottom-right" data-index="5">
+      <div class="moment-clip-wrap corner-bottom-right">
+        <video src="assets/clip6.mp4" muted playsinline loop preload="auto" class="moment-clip"></video>
+        <div class="clip-frame"></div>
+      </div>
+      <div class="moment-text-wrap corner-bottom-right-text">
+        <div class="moment-number">06</div>
+        <div class="moment-label">Papa Ki Pari 🧚‍♀️</div>
+      </div>
+    </div>
+
+  </div><!-- /moments-section -->
+
+  <!-- ── FINALE / DESCRIPTION ── -->
+  <div class="finale-section" id="finale">
+    <div class="finale-stars"></div>
+
+    <div class="finale-inner">
+      <div class="finale-glyph">✦</div>
+      <h2 class="finale-heading">Shriyaavers</h2>
+      <div class="finale-divider"></div>
+
+      <p class="finale-desc">
+        cosmos. A force that moves like stardust,
+        laughs like lightning, and leaves galaxies in her wake.
+        From the courts to the dancefloor, from the boardroom to the runway —
+        she owns every dimension she steps into.
+      </p>
+
+      <div class="finale-traits">
+        <span>✨ Bold</span>
+        <span>👑 Fierce</span>
+        <span>🎾 Athletic</span>
+        <span>🔥 Magnetic</span>
+        <span>💃 Graceful</span>
+        <span>🧚‍♀️ Cherished</span>
+      </div>
+
+      <div class="finale-date-big">22 · 04</div>
+      <div class="finale-subtitle">The Shriyaaverse goes live</div>
+
+      <div class="finale-signature">— with love, from the stars</div>
+    </div>
+  </div>
+
+</section>
+
+<!-- Transition veil -->
+<div id="transition-veil"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
